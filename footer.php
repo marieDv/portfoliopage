@@ -319,8 +319,10 @@
 		uniform float repeatPattern;
 		varying float DEPTH ;
     uniform vec2 mouse;
-
+		uniform float scrollPercentage;
 		uniform float FARPLANE ;
+
+
 		float turbulence( vec3 p ) {
 		
 			float w = 100.0;
@@ -355,10 +357,11 @@
 		vUv = uv;
 
 		// add time to the noise parameters so it's animated
-		noise = 5.0*  -.4 * turbulence( .5 * normal + (time / 20.0) );
+		noise = 0.1*  -.4 * turbulence( .5 * normal + (time) );//0.5
 
-		//float b = 2.0 * pnoise( noiseSize * mod(position, repeatPattern) + vec3( time / 1.5 ), vec3( 900.0 ) ); // multiply sinusDisplacement  with noiseSize
-		float b = 2.0 * pnoise( noiseSize * (position * 1.0 + mouse.x + mouse.y) + vec3( time / 1.5 ), vec3( 900.0 ) ); // multiply sinusDisplacement  with noiseSize
+	  float noiseSizePercent = noiseSize * 1.0 +  (scrollPercentage / 200.0);
+		//float b = 2.0 * pnoise( noiseSizePercent * mod(position, repeatPattern) + vec3( time / 1.5 ), vec3( 900.0 ) ); // multiply sinusDisplacement  with noiseSize
+		float b = 2.0 * pnoise( noiseSizePercent * (position * (1.0 + scrollPercentage) + mouse.x + mouse.y) + vec3( time / 1.5 ), vec3( 900.0 ) ); // multiply sinusDisplacement  with noiseSize
 
 		//float bTwo = 7.0 * pnoise( 3.0 * position + vec3( 1.5 * time ), vec3( 100.0 ) );
 
@@ -404,8 +407,26 @@
     float rand(vec2 co){
     return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
     }
-		
-		
+		float circle(in vec2 _st, in float _radius){
+    vec2 dist = _st-vec2(0.5);
+
+	return 0.5-smoothstep(_radius-(_radius*5.0),_radius+(_radius*0.01),dot(dist * mouse.x,dist+mouse.y)*4.0);
+}
+
+void circleMouse( out vec4 fragColor, in vec2 fragCoord )
+{
+    vec2 st = fragCoord.xy/vUv.xy;
+
+    vec2 dist = mouse/vUv - st.xy;
+    dist.x *= vUv.x/vUv.y;
+
+    float mouse_pct = length(dist);
+
+    mouse_pct = step(0.3, mouse_pct);
+    vec3 m_color = vec3(mouse_pct);
+    fragColor = vec4(m_color, 1.0);
+}
+
 		void main() {
 			vec2 st = gl_FragCoord.xy / (((2000.2)));
 			vec3 red = vec3(0.5, 0.09, 0.0);
@@ -438,6 +459,12 @@
 			// exp += texture2D(texture, vUv + .2 + (displacement * 0.4) * - displacement);
 			vec4 texForMix = texture2D(texture, vUv + .2 + (displacement * 0.4) * - displacement);
 			 exp += mix(texForMix, vec4(gradient, displacement), scrollPercentage);
+
+
+			 exp += circle(st,0.01);
+			 //exp -= circleMouse(exp, mouse);
+
+			//exp += vec4(vUv.x,vUv.y, 1.0, 1.0 );
 
 			text /= vec4((1.0 * 400.0 * 900.0) / (900.0 + 1.0 - DEPTH * (900.0 - 1.0))) / vec4(900.0);
 			text += texture2D(texture, vUv + .2 + (displacement * 0.4) * - displacement );

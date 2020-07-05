@@ -162,7 +162,7 @@ function render() {
   // console.log(current)
 
 
-  model.material.uniforms['time'].value = .000055 * (Date.now() - start);//.00025
+  model.material.uniforms['time'].value = .00055 * (Date.now() - start);//.00025
   // model.material.uniforms['repeatPattern'].value = variables.repeatPattern;
   model.material.uniforms['noiseHeight'].value = variables.noiseHeight;
   model.material.uniforms['scrollPercentage'].value = current;

@@ -1,5 +1,6 @@
 .greeting {
-  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
   margin-bottom: 80px;
 }
 
@@ -7,6 +8,7 @@
   text-transform: lowercase;
   max-width: 89%;
   pointer-events: none;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 768px) {

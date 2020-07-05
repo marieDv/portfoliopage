@@ -1,10 +1,10 @@
 <?php
 /**
- * Marie\'s simplified Website functions and definitions
+ * portfoliopage functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Marie\'s_simplified_Website
+ * @package portfoliopage
  */
 
 if ( ! defined( '_S_VERSION' ) ) {

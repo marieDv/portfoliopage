@@ -75,7 +75,7 @@
                     </video> -->
                 </span> and future Information Design student at Design Academy Eindhoven. </h2>
 
-                <h4>currently open for all sorts of freelance projects! 😱</h4>
+                <h4>currently open for all sorts of freelance projects!</h4>
         </section>
         <section class="update">
             <h3>Selected Works</h3><span class="text-small">2015 - 2020</span>
