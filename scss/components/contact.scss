@@ -1,0 +1,19 @@
+.contact-section {
+
+  ul {
+    padding: inherit;
+  }
+  li {
+    font-size: 24px;
+    color: #ffffff;
+    border-top: 1px solid white;
+    list-style: none;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    &:first-child {
+      border-top: transparent;
+    }
+  }
+}

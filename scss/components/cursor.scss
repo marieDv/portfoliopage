@@ -1,0 +1,39 @@
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.cursor--small {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: white;
+}
+
+.cursor--canvas {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 999;
+}
+
+.cursor--canvas--active {
+  mix-blend-mode: exclusion;
+}
+.cursor--canvas-about--active {
+  -webkit-transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  mix-blend-mode: exclusion;
+  -webkit-animation: 0.7s animate-opacity forwards;
+          animation: 0.7s animate-opacity forwards;
+}
+
+.cursor--canvas-about--leaving {
+  -webkit-animation: 0.7s animate-opacity-back;
+          animation: 0.7s animate-opacity-back;
+}

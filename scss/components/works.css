@@ -1,0 +1,212 @@
+.update .update-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200px;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin: 34px 0 56px;
+}
+
+.update .update-container img {
+  padding-left: 0;
+  height: 100%;
+}
+
+.works {
+  width: 100%;
+  padding: 0;
+}
+
+.works-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .works-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.works .item {
+  overflow: hidden;
+}
+
+.works .video-bg-container {
+  overflow: hidden;
+}
+
+.works .video-bg-container video {
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: -webkit-fill-available;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  z-index: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.works h3 {
+  display: inline;
+  margin-right: 14px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.works .work-filters {
+  display: block;
+  margin-top: 40px;
+}
+
+.works .work-filters a {
+  font-size: 16px;
+  margin-right: 14px;
+  display: inline-block;
+}
+
+.works .work-filters .filter-selected {
+  font-weight: 700;
+}
+
+.works .small-section,
+.works .big-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.works .small-section {
+  padding: inherit;
+}
+
+.works .small-section .item {
+  display: block;
+  height: 330px;
+  margin-bottom: 16px;
+  width: 100%;
+  background-size: 123%;
+  background-position: center center;
+}
+
+.works .big-section {
+  padding: inherit;
+  padding-right: 0;
+  margin-left: 16px;
+}
+
+.works .big-section .item {
+  display: block;
+  height: calc(652px + 24px);
+  width: calc(100% - 16px);
+  background-size: cover;
+  background-position: center center;
+}
+
+.works .big-section .item-long {
+  height: 330px;
+  background-size: cover;
+}
+
+.works .big-section .item {
+  opacity: 0;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+
+.works .big-section .item.visible {
+  opacity: 1;
+}
+
+.works .small-section .item {
+  opacity: 0;
+  -webkit-transition: all 1.1s ease-out;
+  transition: all 1.1s ease-out;
+}
+
+.works .small-section .item.visible {
+  opacity: 1;
+}
+
+.works .item {
+  position: relative;
+  padding: 0 !important;
+}
+
+.works .item .more-button {
+  display: none;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.works .item-text {
+  visibility: hidden;
+  padding: 40px 0 0 40px;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+}
+
+.works .item-text h3 {
+  max-width: 200px;
+  word-break: break-all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.works .item:hover .item-text {
+  visibility: visible;
+}
+
+.works .item .text-subheadline {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.works .item img {
+  width: 100%;
+}
+
+.section-insta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section-insta .Header {
+  background: red !important;
+  display: none !important;
+}
+/*# sourceMappingURL=works.css.map */

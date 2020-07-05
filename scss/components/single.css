@@ -1,0 +1,53 @@
+.single {
+  margin-top: 60px;
+  padding: 0 16px;
+}
+
+.single .title {
+  font-size: 140px;
+  font-weight: 600;
+  line-height: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  .single .title {
+    font-size: 72px;
+  }
+}
+
+.single .subheadline {
+  line-height: 1;
+  display: inline-block;
+  margin: 16px 0 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .single .subheadline {
+    margin: 24px 0 24px;
+    display: inline-block;
+  }
+}
+
+.single .nav .back {
+  height: 32px;
+  color: #000000;
+  background: white;
+  padding: 2px 10px;
+  display: inline;
+  top: -6px;
+  margin-right: 16px;
+}
+
+.single .nav .back:hover::after {
+  content: inherit;
+}
+
+.single .nav .index {
+  font-size: 34px;
+  display: inline;
+}
+
+.single .nav .index strong {
+  font-weight: 800;
+}
+/*# sourceMappingURL=single.css.map */

@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "Butler Stencil";
+  src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff");
+  src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+// @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700,900&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800&display=swap");
+// @import url("https://sfonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../assets/fonts/HKGrotesk-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../assets/fonts/HKGrotesk-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+// BOLD
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../assets/fonts/HKGrotesk-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../assets/fonts/HKGrotesk-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+//SEMIBOLD
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../assets/fonts/HKGrotesk-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../assets/fonts/HKGrotesk-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+//LIGHT
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../assets/fonts/HKGrotesk-Light.otf") format("opentype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("../assets/fonts/HKGrotesk-LightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@import "variables.scss";
+
+/*///////COMPONENTS///////*/
+@import "components/cursor.scss";
+@import "components/header.scss";
+@import "components/works.scss";
+@import "components/greeting.scss";
+@import "components/footer.scss";
+@import "components/contact.scss";
+
+
+/*///////PAGES///////*/
+// @import "about.scss";
+// @import "single.scss"; 
+
+//@import "../dragdealer/dragdealer.css";
+
+.container-fluid {
+  padding-left: 0;
+}
+
+.dg {
+  z-index: 999999999 !important;
+}
+@import "components/single.scss";
+@import "components/about.scss";
+body {
+  background: #01000f;
+  animation: 1.5s load-screen forwards;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow-x: hidden;
+  // cursor: none;
+  background-color: #0a0a0a;
+}
+* {
+  color: white;
+  font-family: "HK Grotesk", sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+@keyframes load-screen {
+  0% {
+    opacity: 0;
+    background: #020202;
+  }
+  100% {
+    opacity: 1;
+    background: #020202;
+  }
+}
+p {
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  color: #ffffff;
+}
+a {
+  cursor: pointer;
+}
+h2,
+h3 {
+  font-size: 34px;
+  font-weight: 600;
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+h2 {
+  font-size: 64px;
+  line-height: 74px;
+  font-weight: 500;
+}
+h3 {
+  font-size: 34px;
+  font-weight: 400;
+  display: inline;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 34px;
+}
+
+.serif {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 59px;
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+img {
+  //height: 100%;
+  width: auto;
+  max-width: inherit;
+}
+a {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none !important;
+  padding: 3px 0;
+  color: #ffffff;
+}
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:visited {
+  color: #ffffff;
+}
+a:hover {
+  color: #ffffff;
+}
+a:not(.item):hover:after {
+  transform-origin: left;
+  width: 100%;
+  animation: 0.7s animateLine cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+.text-small {
+  font-size: 12px;
+  display: inline;
+  margin-left: 18px;
+}
+#main {
+  padding: 0 18px 0 18px;
+  // background-color: #080707;
+}
+@keyframes animateLine {
+  0% {
+    transform: scaleX(0.1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes animateLineBack {
+  0% {
+    transform: scaleX(1);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}

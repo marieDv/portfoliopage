@@ -1,0 +1,93 @@
+.about {
+  padding: 0 16px;
+  margin-top: 60px;
+
+  h4 {
+    font-size: 18px;
+  }
+  .resume {
+    margin-top: 64px;
+  }
+  .skill-list {
+    // display: flex;
+    margin-top: 80px;
+    margin-left: 0;
+    flex-wrap: wrap;
+    max-width: inherit;
+    margin-left: -16px;
+    width: calc(100% + 32px);
+    ul {
+      margin: 0;
+      border: 1px solid;
+      &:first-child {
+        margin-left: 0;
+        // padding-left: 0;
+      }
+
+      list-style: none;
+
+      li {
+        line-height: 2.5;
+        font-size: 16px;
+      }
+      li:first-child {
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+  }
+  .education {
+    margin: 140px 0 140px 0;
+    ul {
+      display: flex;
+      font-size: 34px;
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      li {
+        // width: 33%;
+        padding: 0;
+        position: relative;
+        line-height: 1;
+        &:not(:last-child):after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          height: 32px;
+          width: 100px;
+          // background-position: left center;
+          // background-size: contain;
+          // background-repeat: no-repeat;
+          // background-image: url('../../maries-simplified-website/assets/arrow.png');
+        }
+        h4 {
+          max-width: 86%;
+          font-size: 34px;
+          font-weight: 500;
+          font-style: normal;
+        }
+      }
+      img {
+        height: 100%;
+        margin: auto 0;
+        padding: 0 21px;
+      }
+      .date,
+      .location {
+        display: block;
+        margin: 24px 0;
+        color: #545454;
+      }
+      .date {
+        font-size: 16px;
+      }
+      .location {
+        font-size: 16px;
+      }
+    }
+  }
+}
