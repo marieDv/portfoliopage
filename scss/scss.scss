@@ -1,63 +1,72 @@
-@font-face {
-  font-family: "Butler Stencil";
-  src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff");
-  src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "Butler Stencil";
+//   src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff");
+//   src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff") format("woff");
+//   font-weight: 200;
+//   font-style: normal;
+// }
 
-// @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700,900&display=swap");
-// @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800&display=swap");
-// @import url("https://sfonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap');
-@font-face {
-  font-family: 'HK Grotesk';
-  src: url("../assets/fonts/HKGrotesk-Regular.otf") format("opentype");
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'HK Grotesk';
-  src: url("../assets/fonts/HKGrotesk-Italic.otf") format("opentype");
-  font-weight: normal;
-  font-style: italic;
-}
-// BOLD
-@font-face {
-  font-family: 'HK Grotesk';
-  src: url("../assets/fonts/HKGrotesk-Bold.otf") format("opentype");
-  font-weight: bold;
-}
-@font-face {
-  font-family: 'HK Grotesk';
-  src: url("../assets/fonts/HKGrotesk-BoldItalic.otf") format("opentype");
-  font-weight: bold;
-  font-style: italic;
-}
-//SEMIBOLD
-@font-face {
-  font-family: 'HK Grotesk';
-  src: url("../assets/fonts/HKGrotesk-Medium.otf") format("opentype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'HK Grotesk';
-  src: url("../assets/fonts/HKGrotesk-MediumItalic.otf") format("opentype");
-  font-weight: 500;
-  font-style: italic;
-}
-//LIGHT
-@font-face {
-  font-family: 'HK Grotesk';
-  src: url("../assets/fonts/HKGrotesk-Light.otf") format("opentype");
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&display=swap');
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-Regular.otf") format("opentype");
+//   font-weight: normal;
+// }
+
+
+
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-Regular.otf") format("opentype");
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-Italic.otf") format("opentype");
+//   font-weight: normal;
+//   font-style: italic;
+// }
+// // BOLD
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-Bold.otf") format("opentype");
+//   font-weight: bold;
+// }
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-BoldItalic.otf") format("opentype");
+//   font-weight: bold;
+//   font-style: italic;
+// }
+// //SEMIBOLD
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-Medium.otf") format("opentype");
+//   font-weight: 500;
+// }
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-MediumItalic.otf") format("opentype");
+//   font-weight: 500;
+//   font-style: italic;
+// }
+// //LIGHT
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-Light.otf") format("opentype");
+//   font-weight: 200;
+// }
+// @font-face {
+//   font-family: 'HK Grotesk';
+//   src: url("../assets/fonts/HKGrotesk-LightItalic.otf") format("opentype");
+//   font-weight: 200;
+//   font-style: italic;
+// }
+p, a {
+  font-family: 'Stellar', sans-serif;
   font-weight: 200;
-}
-@font-face {
-  font-family: 'HK Grotesk';
-  src: url("../assets/fonts/HKGrotesk-LightItalic.otf") format("opentype");
-  font-weight: 200;
-  font-style: italic;
+  text-rendering: optimizeLegibility;
 }
 
 @import "variables.scss";
@@ -77,26 +86,33 @@
 
 //@import "../dragdealer/dragdealer.css";
 
+#container {
+  z-index: 999 !important;
+}
 .container-fluid {
   padding-left: 0;
 }
 
 .dg {
-  z-index: 999999999 !important;
+  // z-index: 999999999 !important;
+  display: none;
 }
 @import "components/single.scss";
 @import "components/about.scss";
 body {
-  background: #01000f;
-  animation: 1.5s load-screen forwards;
+  // background-color: #968475 !important;
+  background-color: #ffffff !important;
+  animation: 5s load-screen forwards;
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   overflow-x: hidden;
   // cursor: none;
-  background-color: #0a0a0a;
+
 }
 * {
-  color: white;
-  font-family: "HK Grotesk", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+  color: #000000;
+  // font-family: "HK Grotesk", sans-serif;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -104,25 +120,28 @@ body {
 @keyframes load-screen {
   0% {
     opacity: 0;
-    background: #020202;
+    background: #000000;
   }
   100% {
     opacity: 1;
     background: #020202;
   }
 }
+
 p {
+  font-family: "Stellar", sans-serif !important;
   font-size: 14px;
   font-weight: 100;
   letter-spacing: 0.25px;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 a {
   cursor: pointer;
 }
 h2,
 h3 {
+  font-family: "Stellar", sans-serif !important;
   font-size: 34px;
   font-weight: 600;
   @media only screen and (max-width: 768px) {
@@ -130,9 +149,10 @@ h3 {
   }
 }
 h2 {
+
   font-size: 64px;
-  line-height: 74px;
-  font-weight: 500;
+  line-height: 68px;
+  font-weight: 700;
 }
 h3 {
   font-size: 34px;
@@ -144,12 +164,6 @@ h4 {
   font-weight: 400;
   font-style: italic;
   margin-top: 34px;
-}
-
-.serif {
-  font-family: 'Playfair Display', serif;
-  font-weight: 800;
-  font-size: 59px;
 }
 
 .button {
@@ -172,12 +186,12 @@ a {
 }
 a:after {
   background: none repeat scroll 0 0 transparent;
-  bottom: 0;
+  bottom: 11px;
   content: "";
   display: block;
   height: 2px;
   position: absolute;
-  background: #fff;
+  background: #000;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -198,7 +212,7 @@ a:not(.item):hover:after {
   margin-left: 18px;
 }
 #main {
-  padding: 0 18px 0 18px;
+  // padding: 0 18px 0 18px;
   // background-color: #080707;
 }
 @keyframes animateLine {

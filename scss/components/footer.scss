@@ -1,7 +1,6 @@
 .footer {
   width: 100%;
   bottom: 0;
-  background-color: #060606;
   padding: 24px 0;
   h3 {
     margin-left: 16px;
@@ -11,8 +10,10 @@
     margin: inherit;
     margin: 24px;
     li {
+      
       list-style: none;
       // border-bottom: #ffffff1a 1.5px solid;
+      line-height: 1;
       display: flex;
       align-items: center;
       padding: 0 16px;
@@ -25,10 +26,11 @@
       cursor: pointer;
 
       font-size: 34px;
-      height: 64px;
-      &:not(:last-child){
-      border-bottom: 2px solid white;
-    }
+      height: 78px;
+      padding-left: 0;
+      &:not(:last-child) {
+        // border-bottom: 2px solid white;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -47,5 +49,22 @@
   .reference {
     padding-left: 16px;
     opacity: 0.3;
+  }
+}
+
+#footer {
+  &.shift {
+    animation: 1s revealFooter forwards;
+    background: red;
+  }
+
+  @keyframes revealFooter {
+    0% {
+      transform: translateY(-150);
+    }
+    100% {
+
+      transform: translateY(0);
+    }
   }
 }

@@ -1,5 +1,5 @@
 let lastLink = document.getElementById("select-all");
-
+let scrolldown = true;
 window.addEventListener('load', function () {
   filterContent();
   scrollReveal();
@@ -10,28 +10,21 @@ function detectIfItemIshovered() {
   var items = document.getElementsByClassName("item-text");
   for (let i = 0; i < items.length; i++) {
    
-
     items[i].addEventListener('mousemove', function (event) {
-      // if (!items[i].parentNode.classList.contains("hide-item")) {
-        // console.log(items[i].parentNode);
+
         let bb = items[i].getBoundingClientRect();
         var x = event.clientX - bb.left;
         var y = event.clientY - bb.top;
 
         items[i].querySelector('h3').style.transform = "translateX(" + (x - (items[i].offsetWidth / 2)) + "px) translateY(" + (y - (items[i].offsetHeight / 2)) + "px)";
-      // }
     });
     items[i].addEventListener('mouseleave', function () {
-      console.log("mouseleave")
       items[i].querySelector('h3').style.color = "white";
     });
   }
 }
 
 function scrollReveal() {
-  // TweenLite.set(document.querySelector("#main"), {
-  //   y: -window.pageYOffset
-  // })
 
   var controller = new ScrollMagic.Controller();
   var revealElements = document.getElementsByClassName("item");
@@ -43,9 +36,9 @@ function scrollReveal() {
       reverse: false // only do once
     })
       .setClassToggle(revealElements[i], "visible") // add class toggle
-      // .addIndicators({ name: "digit " + (i + 1) }) // add indicators (requires plugin)
       .addTo(controller);
   }
+
 }
 function filterContent() {
   let webCommercial = document.getElementById("select-web-commercial");

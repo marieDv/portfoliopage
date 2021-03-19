@@ -32,17 +32,17 @@
 </head>
 
 <body class="">
-    <header id="" class="header header-mobile container-fluid">
-        <?php $page = get_page_by_path( 'about' );?>
+    <header id="navigation" class="header header-mobile container-fluid">
+        <?php $page = get_page_by_path('about'); ?>
         <div id="me-link"></div>
-        <a class="work selected" href="<?php echo get_home_url() ?>">Work</a>
-        <a class="" href="<?php echo get_the_title( $page ); ?>">About</a>
-        <p class="current-alert">Currently based in Vienna
-            and open for <strong>Freelance work</strong></p>
+        <!-- <a class="work selected" href="<?php echo get_home_url() ?>">Work</a>
+        <a class="work selected" href="<?php echo get_home_url() ?>">About</a> -->
+        <!-- <a class="" href="<?php echo get_the_title($page); ?>">About</a> -->
+        <!-- <p class="current-alert">currently studying at the Design Academy in Eindhoven. Send me a message if you want to collaborate!</strong></p> -->
     </header>
 
-    <div class="cursor cursor--small"></div>
-    <canvas class="cursor cursor--canvas" resize></canvas>
+    <!-- <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas> -->
     <section id="main">
         <div class="absolute pin-t mt-16 mr-6 w-full z-50">
 
@@ -63,44 +63,92 @@
 
         <!-- ///////////////////////////////WHEEL -->
         <section class="greeting container-fluid">
-            <div id="container"></div>
-            <h2> 
-                <!-- <span style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/assets/marie.png');" class="mini-me"></span> -->
-                <span class="serif">Visual Designer, three.js programmer</span>
-                <!-- <span class="mini-me video-bg-container"> -->
-                    <!-- <video width="55" height="55" autoplay loop muted>
-                        <source src="<?php bloginfo('stylesheet_directory') ?>/assets/videos/cellular.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video> -->
-                </span> and future Information Design student at Design Academy Eindhoven. </h2>
+            <h2>
+              Marie Dvorzak
+            </h2>
+            <h3>
+            I am a Designer and programmer with a focus on systems that produce information. I want to investigate where the information that we consume comes from and how we react to it. My work is strongly guided by an intersectional approach and the aim to use technology to make information interesting, emotional and accessible.
+</h3>
 
-                <h4>currently open for all sorts of freelance projects!</h4>
+            <?php
+            global $i;
+            global $post;
+            $args = array('category_name'  => 'post-about', 'posts_per_page' => -1,); ///25 //2 for dev
+            $work = get_posts($args);
+            ?>
+
+            <div class="post-about">
+                <?php foreach ($work as $post) : setup_postdata($post); ?>
+
+                    <!-- <h2><?php echo get_field('about-intro') ?></h2> -->
+
+                    <div class="post-about-item column about-me">
+                        <ul class="col-12 col-sm-3">
+                            <li><a href="mailto:mariedvorzak@gmail.com">
+                                    <h3>E-Mail</h3>
+                            <li><a href="https://www.behance.net/dvorzakmar5f83">
+                                    <h3>Behance</h3>
+                                </a></li>
+                        </ul>
+                        <div class="col-0 col-sm-2"></div>
+
+                        <div class="col-12 col-sm-3">
+                            <span>FREELANCE & AGENCIES:</span>
+                            <p><?php echo get_field('costumers') ?></p>
+                        </div>
+                        <div class="col-12 col-sm-3">
+                            <span>Education:</span>
+                            <p><?php echo get_field('education') ?></p>
+                        </div>
+                        <!-- <div class="col-12 col-sm-3">
+                        <span>VOLUNTEERING ACTIVITIES:</span>
+                        <p><?php echo get_field('agencies') ?></p>
+                    </div> -->
+                    </div>
+
+                    <!-- <div> -->
+                    <!-- <?php echo get_field('quote') ?> -->
+                    <!-- </div> -->
+                    <span class="position-absolute item-text">
+                        <h3 class="">
+                            <span class="">
+                                <?php
+                                $i += 1;
+                                // echo "0" . $i . " "; 
+                                ?>
+                            </span>
+
+                        </h3>
+                    </span>
+
+                <?php endforeach;
+                wp_reset_postdata(); ?>
+            </div>
         </section>
-        <section class="update">
+        <!-- <section class="update">
             <h3>Selected Works</h3><span class="text-small">2015 - 2020</span>
             <?php
-                    global $i;
-                    global $post;
-                    $args = array('category_name'  => 'latest-update', 'posts_per_page' => 1,); ///25 //2 for dev
-                    $update = get_posts($args);
-                    ?>
-                    <?php foreach ($update as $post) : setup_postdata($post); 
-                    $imageUpdate = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
+            global $i;
+            global $post;
+            $args = array('category_name'  => 'latest-update', 'posts_per_page' => 1,); ///25 //2 for dev
+            $update = get_posts($args);
+            ?>
+                    <?php foreach ($update as $post) : setup_postdata($post);
+                        $imageUpdate = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
                     ?>
                     <div class="update-container container-fluid">
                     <img class="col-8" src="<?php echo $imageUpdate[0] ?>" alt="updated-image">
                     <div class="col-4">
                     <p><?php echo get_field('work-category') ?></p>
-                    <h3><?php the_title(); ?></h3>
+                    <h3>Latest Update: <?php the_title(); ?></h3>
                     <p><?php echo get_field('update-description') ?></p>
                     </div>
                     </div>
                     <?php endforeach;
                     wp_reset_postdata(); ?>
-        </section>
-        <section class="works">
-            <!-- <h3>Selected Works</h3><span class="text-small">2015-2020</span> -->
+        </section> -->
+        <section id="shift-navigation" class="works">
+            <h3>Selected Works</h3><span class="text-small">2015-2020</span>
             <span class="work-filters">
                 <a id="select-all" class="filter-selected">All</a>
                 <a id="select-web-non-commercial">Web Non-Commercial</a>
@@ -140,7 +188,8 @@
                                         <span class="">
                                             <?php
                                             $i += 1;
-                                            // echo "0" . $i . " "; ?>
+                                            // echo "0" . $i . " "; 
+                                            ?>
                                         </span>
 
                                         <?php the_title(); ?>
@@ -186,7 +235,8 @@
                                     <span class="">
                                         <?php
                                         $i += 1;
-                                        // echo "0" . $i . " "; ?>
+                                        // echo "0" . $i . " "; 
+                                        ?>
                                     </span>
                                     <?php the_title(); ?>
                                 </h3>
@@ -235,7 +285,8 @@
                                     <span class="">
                                         <?php
                                         $i += 1;
-                                        // echo "0" . $i . " "; ?>
+                                        // echo "0" . $i . " "; 
+                                        ?>
                                     </span>
                                     <?php the_title(); ?>
                                 </h3>
@@ -254,11 +305,16 @@
 
                     <?php endforeach;
                     wp_reset_postdata(); ?>
+
+
+
                 </div>
 
 
-            </div>
         </section>
+
+
+        <div id="shift-footer"></div>
         <section class="section-insta">
             <?php /*
                     $filter = array('category_name'  => 'insta', 'posts_per_page' => -1,); ///25 //2 for dev
@@ -284,12 +340,12 @@
     </section>
     <?php require(dirname(__FILE__) . '/footer.php'); ?>
 
-    
+
 
 </body>
 <footer>
     <?php
-    wp_enqueue_script('/js/main.js');
+    // wp_enqueue_script('/js/main.js');
     ?>
 </footer>
 

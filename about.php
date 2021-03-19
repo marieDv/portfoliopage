@@ -61,20 +61,20 @@
 
       <!-- <h3>Who I worked with: </h3> -->
       <div class="skill-list container flex">
-        <ul class="col-xl-3 col-lg-6">
+        <ul class="col-xl-3 col-lg-12">
           <li>Skills & Focus:</li>
           <li>Digital Design</li>
           <li>UI/UX</li>
           <li>Three.js programming</li>
           <li>Frontend Development (React / Vue)</li>
         </ul>
-        <ul class="col-xl-3 col-lg-6">
+        <ul class="col-xl-3 col-lg-12">
           <li>Agencies:</li>
           <li>Process Studio (Freelance)</li>
           <li>Wild (Intern Creative Development)</li>
           <li>Campaigning Bureau (Intern)</li>
         </ul>
-        <ul class="col-xl-3 col-lg-6">
+        <ul class="col-xl-3 col-lg-12">
           <li>Clients:</li>
           <li>Care01</li>
           <li>Hosi Wien</li>
@@ -84,9 +84,9 @@
           <li>FIV Wien</li>
           <li>Sabre Austria</li>
         </ul>
-        <ul class="col-xl-3 col-lg-6">
+        <ul class="col-xl-3 col-lg-12">
           <li>Education:</li>
-          <li>Master Information Design</li>
+          <li>Master Information Design (starting 2020)</li>
           <li>BSc in Mediatechnology and Design</li>
           <li>Diploma in Graphic Design</li>
         </ul>

@@ -1,19 +1,42 @@
 .greeting {
+
+  padding: 0 40px !important;
+  .about-me {
+    padding-top: 80px;
+    ul {
+      margin-left: 0;
+      padding: 0;
+    }
+    ul li{
+      list-style: none;
+
+    }
+  }
   h2 {
-    text-transform: lowercase;
-    max-width: 89%;
+
+    // max-width: 89%;
     pointer-events: none;
     font-weight: 400;
+    text-align: justify;
+    // line-height: 0.95;
+    
     @media only screen and (max-width: 768px) {
-      font-size: 46px;
-      line-height: 1.3;
-      font-weight: 400;
+      // font-size: 72px;
+      line-height: 1.1;
+      font-weight: 300;
     }
+  }
+  span {
+    // color: #E3D4C8;
+    color: #000000;
   }
   padding-top: 40px;
   padding-bottom: 60px;
   margin-bottom: 80px;
-
+  @media only screen and (max-width: 768px) {
+    padding-top: 90px;
+    padding-bottom: 0;
+  }
   .mini-me {
     // background: white;
     display: inline-block;

@@ -22,6 +22,8 @@
 .works {
   width: 100%;
   padding: 0;
+  padding-top: 24px;
+  border-top: 2px solid #000000;
 }
 
 .works-container {
@@ -62,22 +64,22 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
-.works h3 {
-  display: inline;
-  margin-right: 14px;
-  font-size: 24px;
-  text-align: center;
-}
-
 .works .work-filters {
   display: block;
   margin-top: 40px;
+  color: #000000;
 }
 
 .works .work-filters a {
-  font-size: 16px;
-  margin-right: 14px;
+  font-size: 18px;
+  margin-right: 33px;
   display: inline-block;
+}
+
+.works .work-filters a:after {
+  bottom: 1px;
+  color: #000000;
+  background-color: #000000;
 }
 
 .works .work-filters .filter-selected {
@@ -100,7 +102,6 @@
 .works .small-section .item {
   display: block;
   height: 330px;
-  margin-bottom: 16px;
   width: 100%;
   background-size: 123%;
   background-position: center center;
@@ -109,13 +110,12 @@
 .works .big-section {
   padding: inherit;
   padding-right: 0;
-  margin-left: 16px;
 }
 
 .works .big-section .item {
   display: block;
   height: calc(652px + 24px);
-  width: calc(100% - 16px);
+  width: 100%;
   background-size: cover;
   background-position: center center;
 }
@@ -159,6 +159,8 @@
 }
 
 .works .item-text {
+  cursor: none;
+  font-family: "Agrandir-Narrow";
   visibility: hidden;
   padding: 40px 0 0 40px;
   background: rgba(0, 0, 0, 0.7);
@@ -167,7 +169,12 @@
 }
 
 .works .item-text h3 {
-  max-width: 200px;
+  font-size: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Agrandir-Narrow";
+  max-width: 300px;
   word-break: break-all;
   position: absolute;
   top: 0;

@@ -1,38 +1,38 @@
-<footer class="footer no-grid starter container-fluid">
+<footer id="footer" class="footer no-grid starter container-fluid">
 	<!-- <h3>Let’s create something amazing together! 🌝✌️</h3> -->
 	<ul class="">
-		<li><a href="mailto:mariedvorzak@gmail.com"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/cross.svg">E-Mail</a></li>
-		<li><a href="https://www.behance.net/dvorzakmar5f83"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/cross.svg">Behance</a></li>
-		<li><a href="https://vimeo.com/user88204961"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/cross.svg">Vimeo</a></li>
+		<li><a href="mailto:mariedvorzak@gmail.com">
+				<h2>E-Mail</h2>
+			</a></li><!-- img src="<?php bloginfo('stylesheet_directory'); ?>/assets/cross.svg">-->
+		<li><a href="https://www.behance.net/dvorzakmar5f83">
+				<h2>Behance</h2>
+			</a></li>
+		<!-- <li><a href="https://vimeo.com/user88204961"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/cross.svg">Vimeo</a></li> -->
 	</ul>
-	<span class="reference">© Coded by Marie Dvorzak</span>
+	<span class="reference">© Marie Dvorzak e.U.</span>
 	<div class="navigate">
 		<!-- <span>drag to navigate</span> -->
 	</div>
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script> -->
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.2/paper-full.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
-<script src="https://threejs.org/examples/js/controls/TrackballControls.js"></script>
 
-<script src="<?php bloginfo('template_url'); ?>/js/threejs/CopyShader.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script> -->
+<!-- <script src="https://threejs.org/examples/js/controls/TrackballControls.js"></script> -->
 
-<script src="<?php bloginfo('template_url'); ?>/js/threejs/EffectComposer.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/threejs/ShaderPass.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/threejs/RenderPass.js"></script>
-<!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/LuminosityShader.js"></script> -->
-<script src="<?php bloginfo('template_url'); ?>/js/threejs/FilmShader.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/threejs/FilmPass.js"></script>
-<!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/GlitchPass.js"></script> --> -->
+<!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/CopyShader.js"></script> -->
+
+<!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/EffectComposer.js"></script> -->
+<!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/ShaderPass.js"></script> -->
+<!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/RenderPass.js"></script> -->
+<!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/FilmShader.js"></script> -->
+<!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/FilmPass.js"></script> -->
 
 <script type="x-shader/x-vertex" id="vertexShader">
 
@@ -157,7 +157,7 @@
 		#define K2 0.020408163265306 // 1/(7*7)
 		#define Kz 0.166666666667 // 1/6
 		#define Kzo 0.416666666667 // 1/2-1/6*2
-		#define jitter 2.0 // smaller jitter gives more regular pattern
+		#define jitter 0.002 // smaller jitter gives more regular pattern
 		
 			vec3 Pi = mod289(floor(P));
 			 vec3 Pf = fract(P) - 0.5;
@@ -317,6 +317,7 @@
 		uniform float noiseSize;
 		uniform float  noiseHeight;
 		uniform float repeatPattern;
+		uniform vec2 resolution;
 		varying float DEPTH ;
     uniform vec2 mouse;
 		uniform float scrollPercentage;
@@ -325,7 +326,7 @@
 
 		float turbulence( vec3 p ) {
 		
-			float w = 100.0;
+			float w = 10000.0;
 			float t = -.5;
 		
 			for (float f = 1.0 ; f <= 10.0 ; f++ ){
@@ -339,41 +340,45 @@
 		float rand(vec2 co){
     return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
     }
+		float circleMoving(in vec2 _st, in float _radius, in float blurriness){
+	vec2 dist = _st;
+	dist.y = _st.y * -1.0;
+	return 1.-smoothstep(_radius-(_radius*blurriness), _radius+(_radius*blurriness), dot(dist,dist)*4.0);
+}
+
 		void main() {
 		
 		//vUv = uv;
 		float value = vUv.x;
-			// add time to the noise parameters so it's animated
-		//	noise = 10.0 *  -.10 * turbulence( .5 * normal + time );
-		//	float b = 5.0 * pnoise( noiseSize * position + vec3( 2.0 * time ), vec3( 100.0 ) );
-		//	float displacement = - noise + b;
-		
-			//vec3 newPosition = position + normal + abs(sin(value * 1.9 * 190.0 * 0.5 + time)) + displacement;
-		//	gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
-    
     
 
 		
 		vUv = uv;
 
-		// add time to the noise parameters so it's animated
-		noise = 0.1*  -.4 * turbulence( .5 * normal + (time) );//0.5
+		noise = 2.0*  -.4 * turbulence( 200.0 * normal + (time) );//0.5
 
 	  float noiseSizePercent = noiseSize * 1.0 +  (scrollPercentage / 200.0);
-		//float b = 2.0 * pnoise( noiseSizePercent * mod(position, repeatPattern) + vec3( time / 1.5 ), vec3( 900.0 ) ); // multiply sinusDisplacement  with noiseSize
-		float b = 2.0 * pnoise( noiseSizePercent * (position * (1.0 + scrollPercentage) + mouse.x + mouse.y) + vec3( time / 1.5 ), vec3( 900.0 ) ); // multiply sinusDisplacement  with noiseSize
-
-		//float bTwo = 7.0 * pnoise( 3.0 * position + vec3( 1.5 * time ), vec3( 100.0 ) );
+		float b = 2.0 * pnoise( noiseSizePercent * (position * (1.0 + scrollPercentage)) + vec3( time / 1.5 ), vec3( 900.0 ) ); // multiply sinusDisplacement  with noiseSize
 
 		displacement = - clamp((noise) + (b * (- b * (noiseHeight))) ,- 1.0, 1.0); //* (bTwo * 2.0), -1.0, 1.0) ; //0.5 factor of height
 		float sinusDisplacement = (cos(vUv.y * 3.1415 * clamp((80.3 * time), 1.0, 7.5) * (sin(time))));
 		sinusDisplacement += (sin(vUv.x * 3.1415 * clamp((2.3 * time), 0.2, 0.3) * (7.0)))*7.0; //change 7 to 10 for sinus depth
 
-
-		vec3 newPosition = (position + normal * ( (displacement * (displacement * 10.0) + (sinusDisplacement * 10.0) )));// * vec3(rand(vec2(10.0, 20.0)), rand(10.0, 29.9), 1.0);// * (displacement * (displacement * 10.0) );
-		gl_Position = projectionMatrix * modelViewMatrix * vec4( (newPosition), 1.0 );// * (vec4(sinusDisplacement / 20.0, 1.0));
-		DEPTH = ((gl_Position.z *1.0) / (FARPLANE + 200.0));//0.5 & 10.0
+		vec2 emouse = mouse;
+		// tip2: do the same for your mouse
+		emouse.y *= resolution.y / resolution.x;
+		emouse *= -1.;
 	
+		vec2 circlePos = emouse;
+		float c = circleMoving(circlePos, .03, 1.);
+	//	vec3 mouseCircle = vec4(vec3(c), 1.);
+	  displacement *= 1.0;
+
+
+		vec3 newPosition = (position + normal * ( (displacement * (displacement * .0) + (sinusDisplacement * 0.2) )));// * vec3(rand(vec2(10.0, 20.0)), rand(10.0, 29.9), 1.0);// * (displacement * (displacement * 10.0) );
+		gl_Position = projectionMatrix * modelViewMatrix * vec4( (newPosition), 1.0 );// * (vec4(sinusDisplacement / 20.0, 1.0));
+		DEPTH = ((gl_Position.z *0.001) / (FARPLANE + 2000.0));//0.5 & 10.0
+	//DEPTH = ((gl_Position.z *1.0) / (FARPLANE + 200.0));//0.5 & 10.0
 	}
 
 		</script>
@@ -387,6 +392,7 @@
 		uniform sampler2D texture;
 		uniform sampler2D texturedetails;
 		uniform float scrollPercentage;
+		uniform vec2 resolution;
 		varying float DEPTH;
 		#define TWO_PI 6.28318530718
 		
@@ -413,22 +419,41 @@
 	return 0.5-smoothstep(_radius-(_radius*5.0),_radius+(_radius*0.01),dot(dist * mouse.x,dist+mouse.y)*4.0);
 }
 
-void circleMouse( out vec4 fragColor, in vec2 fragCoord )
-{
-    vec2 st = fragCoord.xy/vUv.xy;
+float circleMoving(in vec2 _st, in float _radius, in float blurriness){
+	vec2 dist = _st;
+	dist.y = _st.y * -1.0;
+	return 1.-smoothstep(_radius-(_radius*blurriness), _radius+(_radius*blurriness), dot(dist,dist)*4.0);
+}
+float random (in vec2 st) {
+    return fract(sin(dot(st.xy,
+                         vec2(12.9898,78.233)))
+                 * 43758.5453123);
+}
+float noiseOverlay (in vec2 st) {
+    vec2 i = floor(st);
+    vec2 f = fract(st);
 
-    vec2 dist = mouse/vUv - st.xy;
-    dist.x *= vUv.x/vUv.y;
+    // Four corners in 2D of a tile
+    float a = random(i*time);
+    float b = random(i + vec2(1.0, 0.0)*time);
+    float c = random(i + vec2(0.0, 1.0)*time);
+    float d = random(i + vec2(1.0, 1.0)*time);
 
-    float mouse_pct = length(dist);
+    // Smooth Interpolation
 
-    mouse_pct = step(0.3, mouse_pct);
-    vec3 m_color = vec3(mouse_pct);
-    fragColor = vec4(m_color, 1.0);
+    // Cubic Hermine Curve.  Same as SmoothStep()
+    vec2 u = f*f*(3.0-2.0*f);
+    // u = smoothstep(0.,1.,f);
+
+    // Mix 4 coorners percentages
+    return mix(a, b, u.x) +
+            (c - a)* u.y * (1.0 - u.x) +
+            (d - b) * u.x * u.y;
 }
 
 		void main() {
-			vec2 st = gl_FragCoord.xy / (((2000.2)));
+
+			vec2 st = gl_FragCoord.xy / ((2000.2));
 			vec3 red = vec3(0.5, 0.09, 0.0);
 			vec3 green = vec3(0.0, 1.0, 0.0);
 			vec3 blue = vec3(0.0, 0.0, 1.0);
@@ -447,6 +472,21 @@ void circleMouse( out vec4 fragColor, in vec2 fragCoord )
 			vec3 violet = mix(red, blue, 0.5);
 			//vec3 violet = mix(red, blue, 0.5);
 		
+//////MOUSE//////////////////
+			vec2 emouse = mouse;
+			emouse *= -1.;
+			emouse.y *= resolution.y / resolution.x;
+			vec2 circlePos = st + emouse;
+			float c = circleMoving(circlePos, 0.05, 3.) / 2.0;
+////////////////////////
+
+	
+
+			vec2 pos = vec2(st*3000.0);
+      float n = noiseOverlay(pos);
+
+
+
 			color /= vec3((20.0 * 1.0 * 900.0) / (900.0 + 1.0 - DEPTH * (900.0 - 1.0))) / vec3(850.0);
 			vec3 gradient = hsb2rgb(vec3((angle / TWO_PI) - 1.5, radius, 0.3));//mix(blue, blue, 5.0)
 			vec3 rainbowGradient = hsb2rgb(vec3((angle / TWO_PI / 2.0) + 1.5, radius, 1.0));
@@ -455,22 +495,26 @@ void circleMouse( out vec4 fragColor, in vec2 fragCoord )
 			//	vec4 text = texture2D( texture, vUv + (displacement / 10.0) * - displacement );
 		
       vec4 text = vec4((rainbowGradient / noise) + (displacement / 10.0) * - displacement, 2.0);
-			vec4 exp = vec4((0.3 * 300.0 * 100.0) / (100.0 + 0.8 - DEPTH * (135.0 - 0.8))) / vec4(900.0);
-			// exp += texture2D(texture, vUv + .2 + (displacement * 0.4) * - displacement);
-			vec4 texForMix = texture2D(texture, vUv + .2 + (displacement * 0.4) * - displacement);
+			vec4 exp = vec4((0.3 * 300.0 * 100.0) / (fract(900.0 + 0.8 - fract(DEPTH)) * (135.0 - 0.8))) / vec4(900.0);
+			vec4 texForMix = texture2D(texture, vUv + .2 + (displacement * 0.4 + (displacement * c)) * - displacement +c);
+		
+		//	exp += circle(st,0.01);
+			
 			 exp += mix(texForMix, vec4(gradient, displacement), scrollPercentage);
+		//	 exp += mix(exp, vec4(n), 0.2);
+			 exp += vec4(0.1, 0.1, 0.1, 0.0);  //		 exp -= vec4(0.0, 1.0, 0.2, 0.0);
+//			 exp *= vec4(1.0, 1.0, n, n);
+
+			 
+
+			//exp += vec4(vUv.x, vUv.y, 1.0, 1.0 );
 
 
-			 exp += circle(st,0.01);
-			 //exp -= circleMouse(exp, mouse);
 
-			//exp += vec4(vUv.x,vUv.y, 1.0, 1.0 );
 
-			text /= vec4((1.0 * 400.0 * 900.0) / (900.0 + 1.0 - DEPTH * (900.0 - 1.0))) / vec4(900.0);
-			text += texture2D(texture, vUv + .2 + (displacement * 0.4) * - displacement );
-			//text += texture2D(texture, vUv + (displacement) * - displacement );// + displacement);
+
      // gl_FragColor = text, 1.0;
-      gl_FragColor = exp;
+      gl_FragColor = sin(fract(((exp) * 3.0)));
      
 		}
 	
@@ -479,4 +523,4 @@ void circleMouse( out vec4 fragColor, in vec2 fragCoord )
 	const templateUrl = '<?= get_bloginfo("template_url"); ?>';
 </script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/three.js"></script>
+<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/three.js"></script> -->

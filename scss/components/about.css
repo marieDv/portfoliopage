@@ -1,6 +1,65 @@
+.post-about-item {
+  height: 350px;
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.post-about-item.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: auto;
+}
+
+.post-about-item.column div {
+  width: 50%;
+}
+
+.post-about-item.column div:not(:last-child) {
+  border-right: 2px solid #eadbc424;
+}
+
+@media only screen and (max-width: 576px) {
+  .post-about-item.column div {
+    padding-bottom: 40px;
+  }
+  .post-about-item.column div:not(:last-child) {
+    border-right: inherit;
+  }
+}
+
+.post-about-item p {
+  font-family: "Migra", serif;
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: inherit;
+}
+
+.post-about-item span {
+  font-size: 24px;
+  font-family: "Radio Grotesk", sans-serif;
+  letter-spacing: inherit;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 1.2px;
+}
+
 .about {
   padding: 0 16px;
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
 .about h4 {
@@ -23,7 +82,7 @@
 
 .about .skill-list ul {
   margin: 0;
-  border: 1px solid;
+  display: block;
   list-style: none;
 }
 
@@ -32,14 +91,16 @@
 }
 
 .about .skill-list ul li {
-  line-height: 2.5;
-  font-size: 16px;
+  line-height: 1.4;
+  font-size: 40px;
 }
 
 .about .skill-list ul li:first-child {
   margin-bottom: 24px;
-  font-size: 24px;
+  font-size: 18px;
+  text-transform: lowercase;
   font-weight: 400;
+  margin-top: 56px;
 }
 
 .about .education {
