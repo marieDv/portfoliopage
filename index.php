@@ -41,13 +41,13 @@
         <!-- <p class="current-alert">currently studying at the Design Academy in Eindhoven. Send me a message if you want to collaborate!</strong></p> -->
     </header>
 
-    <canvas class="cursor cursor--canvas" resize></canvas> -->
+    <canvas class="cursor cursor--canvas" resize></canvas> 
     <section id="main">
         <div class="absolute pin-t mt-16 mr-6 w-full z-50">
 
 
             <ul class="name inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
-     
+
 
             </ul>
         </div>
@@ -57,11 +57,11 @@
         <!-- ///////////////////////////////WHEEL -->
         <section class="greeting container-fluid">
             <h2>
-              Marie Dvorzak
+                Marie Dvorzak
             </h2>
             <h3>
-            I am a Designer and programmer with a focus on systems that produce information. I want to investigate where the information that we consume comes from and how we react to it. My work is strongly guided by an intersectional approach and the aim to use technology to make information interesting, emotional and accessible.
-</h3>
+                I am a Designer and programmer with a focus on systems that produce information. I want to investigate where the information that we consume comes from and how we react to it. My work is strongly guided by an intersectional approach and the aim to use technology to make information interesting, emotional and accessible.
+            </h3>
 
             <?php
             global $i;
@@ -94,25 +94,25 @@
                             <p><?php echo get_field('education') ?></p>
                         </div>
                         <p><?php echo get_field('agencies') ?></p>
-                    </div> -->
-                    </div>
+                    </div> 
+            </div>
 
-                    <!-- <?php echo get_field('quote') ?> -->
-                    <span class="position-absolute item-text">
-                        <h3 class="">
-                            <span class="">
-                                <?php
-                                $i += 1;
-                                // echo "0" . $i . " "; 
-                                ?>
-                            </span>
-
-                        </h3>
+            <!-- <?php echo get_field('quote') ?> -->
+            <span class="position-absolute item-text">
+                <h3 class="">
+                    <span class="">
+                        <?php
+                        $i += 1;
+                        // echo "0" . $i . " "; 
+                        ?>
                     </span>
 
-                <?php endforeach;
+                </h3>
+            </span>
+
+        <?php endforeach;
                 wp_reset_postdata(); ?>
-            </div>
+        </div>
         </section>
         <!-- <section class="update">
             <h3>Selected Works</h3><span class="text-small">2015 - 2020</span>
@@ -317,15 +317,6 @@
                     <?php endforeach;
                     wp_reset_postdata(); */ ?>
         </section>
-        <!-- <section class="contact-section">
-            <h3>Let's grab a coffee together!</h3>
-            <ul class="contact-links">
-                <li>E-Mail</li>
-                <li>Behance</li>
-                <li>Vimeo</li>
-
-            </ul>
-        </section> -->
     </section>
     <?php require(dirname(__FILE__) . '/footer.php'); ?>
 
