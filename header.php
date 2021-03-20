@@ -38,10 +38,10 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$maries_simplified_website_description = get_bloginfo( 'description', 'display' );
-			if ( $maries_simplified_website_description || is_customize_preview() ) :
+			$portfoliopage_description = get_bloginfo( 'description', 'display' );
+			if ( $portfoliopage_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $maries_simplified_website_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<p class="site-description"><?php echo $portfoliopage_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 

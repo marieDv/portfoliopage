@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				maries_simplified_website_posted_on();
-				maries_simplified_website_posted_by();
+				portfoliopage_posted_on();
+				portfoliopage_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php maries_simplified_website_post_thumbnail(); ?>
+	<?php portfoliopage_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -58,6 +58,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php maries_simplified_website_entry_footer(); ?>
+		<?php portfoliopage_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
