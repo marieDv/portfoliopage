@@ -33,8 +33,8 @@
 
 <body class="">
     <header id="navigation" class="header header-mobile container-fluid">
-        <?php $page = get_page_by_path('about'); ?>
-        <div id="me-link"></div>
+        <!-- <?php $page = get_page_by_path('about'); ?> -->
+        <!-- <div id="me-link"></div> -->
         <!-- <a class="work selected" href="<?php echo get_home_url() ?>">Work</a>
         <a class="work selected" href="<?php echo get_home_url() ?>">About</a> -->
         <!-- <a class="" href="<?php echo get_the_title($page); ?>">About</a> -->
@@ -48,13 +48,7 @@
 
 
             <ul class="name inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
-                <!-- <img id="" alt="about me ring" class="info-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/info-ring.png"> -->
-                <li class="header-nav">
-                    <!-- <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
-                    <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
-                    <a class="bottomNav" href="mailto:mariedvorzak@gmail.com?Subject=Hi!">contact</a> -->
-                </li>
-
+     
 
             </ul>
         </div>

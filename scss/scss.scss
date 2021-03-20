@@ -117,7 +117,7 @@ body {
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  color: red !important;
+
 }
 @keyframes load-screen {
   0% {
@@ -141,23 +141,25 @@ p {
 a {
   cursor: pointer;
 }
-h2,
-h3 {
-  font-family: "Stellar", sans-serif !important;
-  font-size: 34px;
-  font-weight: 600;
-  @media only screen and (max-width: 768px) {
-    font-size: 24px;
-  }
-}
 h2 {
+  font-family: "Stellar", sans-serif !important;
+  font-size: 24px;
+  font-weight: 600;
 
   font-size: 64px;
   line-height: 68px;
   font-weight: 700;
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+h2 {
+
+
 }
 h3 {
-  font-size: 34px;
+  font-family: "Stellar", sans-serif !important;
+  font-size: 32px;
   font-weight: 400;
   display: inline;
 }

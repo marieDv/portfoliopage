@@ -701,13 +701,8 @@ p, a {
 }
 
 .post-about-item span {
-  font-size: 24px;
-  font-family: "Radio Grotesk", sans-serif;
-  letter-spacing: inherit;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-size: 16px;
   line-height: 1;
-  letter-spacing: 1.2px;
 }
 
 .about {
@@ -831,7 +826,6 @@ body {
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  color: red !important;
 }
 
 @-webkit-keyframes load-screen {
@@ -869,28 +863,24 @@ a {
   cursor: pointer;
 }
 
-h2,
-h3 {
-  font-family: "Stellar", sans-serif !important;
-  font-size: 34px;
-  font-weight: 600;
-}
-
-@media only screen and (max-width: 768px) {
-  h2,
-  h3 {
-    font-size: 24px;
-  }
-}
-
 h2 {
+  font-family: "Stellar", sans-serif !important;
+  font-size: 24px;
+  font-weight: 600;
   font-size: 64px;
   line-height: 68px;
   font-weight: 700;
 }
 
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+
 h3 {
-  font-size: 34px;
+  font-family: "Stellar", sans-serif !important;
+  font-size: 32px;
   font-weight: 400;
   display: inline;
 }
