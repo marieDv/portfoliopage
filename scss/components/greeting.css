@@ -18,6 +18,17 @@
   list-style: none;
 }
 
+.greeting #greeting-mail {
+  display: inline-block;
+  padding-top: 12px;
+  border-bottom: 1px solid black;
+}
+
+.greeting #headline {
+  padding: 64px 0;
+  text-align: center;
+}
+
 .greeting h2 {
   pointer-events: none;
   font-weight: 400;

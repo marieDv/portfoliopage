@@ -33,6 +33,8 @@
 
 <body class="">
     <header id="navigation" class="header header-mobile container-fluid">
+        <h4>Marie Dvorzak</h4>
+
         <!-- <?php $page = get_page_by_path('about'); ?> -->
         <!-- <div id="me-link"></div> -->
         <!-- <a class="work selected" href="<?php echo get_home_url() ?>">Work</a>
@@ -41,7 +43,7 @@
         <!-- <p class="current-alert">currently studying at the Design Academy in Eindhoven. Send me a message if you want to collaborate!</strong></p> -->
     </header>
 
-    <canvas class="cursor cursor--canvas" resize></canvas> 
+    <canvas class="cursor cursor--canvas" resize></canvas>
     <section id="main">
         <div class="absolute pin-t mt-16 mr-6 w-full z-50">
 
@@ -56,13 +58,14 @@
 
         <!-- ///////////////////////////////WHEEL -->
         <section class="greeting container-fluid">
-            <h2>
-                Marie Dvorzak
-            </h2>
-            <h3>
-                I am a Designer and programmer with a focus on systems that produce information. I want to investigate where the information that we consume comes from and how we react to it. My work is strongly guided by an intersectional approach and the aim to use technology to make information interesting, emotional and accessible.
-            </h3>
-
+            <div id="headline">
+                <h3>
+                    I am a Designer and programmer with a focus on systems that produce information. I want to investigate where the information that we consume comes from and how we react to it. My work is strongly guided by an intersectional approach and the aim to use technology to make information interesting, emotional and accessible.
+                </h3><br>
+                <a id="greeting-mail" href="mailto:mariedvorzak@gmail.com">
+                    <h3>E-Mail</h3>
+                </a>
+            </div>
             <?php
             global $i;
             global $post;
@@ -94,7 +97,7 @@
                             <p><?php echo get_field('education') ?></p>
                         </div>
                         <p><?php echo get_field('agencies') ?></p>
-                    </div> 
+                    </div>
             </div>
 
             <!-- <?php echo get_field('quote') ?> -->
