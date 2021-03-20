@@ -41,7 +41,6 @@
         <!-- <p class="current-alert">currently studying at the Design Academy in Eindhoven. Send me a message if you want to collaborate!</strong></p> -->
     </header>
 
-    <!-- <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas> -->
     <section id="main">
         <div class="absolute pin-t mt-16 mr-6 w-full z-50">
@@ -94,15 +93,11 @@
                             <span>Education:</span>
                             <p><?php echo get_field('education') ?></p>
                         </div>
-                        <!-- <div class="col-12 col-sm-3">
-                        <span>VOLUNTEERING ACTIVITIES:</span>
                         <p><?php echo get_field('agencies') ?></p>
                     </div> -->
                     </div>
 
-                    <!-- <div> -->
                     <!-- <?php echo get_field('quote') ?> -->
-                    <!-- </div> -->
                     <span class="position-absolute item-text">
                         <h3 class="">
                             <span class="">
