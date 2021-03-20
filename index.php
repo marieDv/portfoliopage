@@ -175,7 +175,7 @@
                             <?php if (get_field('video-bg-link')) : ?>
                                 <div class="embed-container video-bg-container">
                                     <video width="320" height="240" autoplay loop muted>
-                                        <source src="<?php bloginfo('stylesheet_directory'); ?><?php the_field('video-bg-link'); ?>" type="video/mp4">
+                                        <source src="<?php the_field('video-bg-link'); ?>" type="video/mp4">
                                         <source src="movie.ogg" type="video/ogg">
                                         Your browser does not support the video tag.
                                     </video>
