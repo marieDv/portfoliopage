@@ -20,7 +20,7 @@
     add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
     ?>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script> -->
+
     <!-- <script type="text/javascript">
         const templateUrl = '<?= get_bloginfo("template_url"); ?>';
     </script> -->
