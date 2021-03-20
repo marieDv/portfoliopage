@@ -831,6 +831,7 @@ body {
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  color: red !important;
 }
 
 @-webkit-keyframes load-screen {

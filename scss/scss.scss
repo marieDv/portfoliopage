@@ -107,6 +107,7 @@ body {
   overflow-x: hidden;
   // cursor: none;
 
+
 }
 * {
   -moz-osx-font-smoothing: grayscale;
@@ -116,6 +117,7 @@ body {
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  color: red !important;
 }
 @keyframes load-screen {
   0% {
