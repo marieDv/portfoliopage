@@ -46,9 +46,9 @@ function filterContent() {
   let creativeCoding = document.getElementById("select-creative-coding");
   let all = document.getElementById("select-all");
   let items = document.getElementsByClassName("item");
-  webCommercial.addEventListener("click", function () {
-    filter(event.target, items, "web-commercial");
-  });
+  // webCommercial.addEventListener("click", function () {
+  //   filter(event.target, items, "web-commercial");
+  // });
   webNonCommercial.addEventListener("click", function () {
     filter(event.target, items, "web-non-commercial");
   });
