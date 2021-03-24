@@ -141,8 +141,8 @@
                                     </h3>
                                     <span class="text-subheadline">
                                         <span class="text-indicator">
-                                            <?php
-                                            echo "0" . $i . " "; ?>
+                                            <!-- <?php
+                                            echo "0" . $i . " "; ?> -->
                                         </span>
                                         <?php $posttags = get_the_tags();
                                         if ($posttags) {
