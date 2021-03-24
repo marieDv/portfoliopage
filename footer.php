@@ -1,30 +1,22 @@
-<footer id="footer" class="footer no-grid starter container-fluid">
+<footer id="footer" class="footer no-grid starter">
 	<!-- <h3>Let’s create something amazing together! 🌝✌️</h3> -->
-	<ul class="">
+	<ul class="mt-5 mb-3">
 		<li><a href="mailto:mariedvorzak@gmail.com">
-				<h2>E-Mail</h2>
+				<h3>E-Mail</h3>
 			</a></li><!-- img src="<?php bloginfo('stylesheet_directory'); ?>/assets/cross.svg">-->
-		<li><a href="https://www.behance.net/dvorzakmar5f83">
-				<h2>Behance</h2>
-			</a></li>
+		<!-- <li><a href="https://www.behance.net/dvorzakmar5f83">
+				<h3>Behance</h3>
+			</a></li> -->
 		<!-- <li><a href="https://vimeo.com/user88204961"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/cross.svg">Vimeo</a></li> -->
 	</ul>
-	<span class="reference">© Marie Dvorzak e.U.</span>
+	<span class="reference mb-2">© Marie Dvorzak e.U.</span>
 	<div class="navigate">
 		<!-- <span>drag to navigate</span> -->
 	</div>
 </footer>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script> -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script> -->
 
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script> -->
-<!-- <script src="https://threejs.org/examples/js/controls/TrackballControls.js"></script> -->
 
 <!-- <script src="<?php bloginfo('template_url'); ?>/js/threejs/CopyShader.js"></script> -->
 

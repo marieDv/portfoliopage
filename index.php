@@ -66,56 +66,7 @@
                     <h3>E-Mail</h3>
                 </a>
             </div>
-            <?php
-            global $i;
-            global $post;
-            $args = array('category_name'  => 'post-about', 'posts_per_page' => -1,); ///25 //2 for dev
-            $work = get_posts($args);
-            ?>
 
-            <div class="post-about">
-                <?php foreach ($work as $post) : setup_postdata($post); ?>
-
-                    <!-- <h2><?php echo get_field('about-intro') ?></h2> -->
-
-                    <div class="post-about-item column about-me">
-                        <ul class="col-12 col-sm-3">
-                            <li><a href="mailto:mariedvorzak@gmail.com">
-                                    <h3>E-Mail</h3>
-                            <li><a href="https://www.behance.net/dvorzakmar5f83">
-                                    <h3>Behance</h3>
-                                </a></li>
-                        </ul>
-                        <div class="col-0 col-sm-2"></div>
-
-                        <div class="col-12 col-sm-3">
-                            <span>FREELANCE & AGENCIES:</span>
-                            <p><?php echo get_field('costumers') ?></p>
-                        </div>
-                        <div class="col-12 col-sm-3">
-                            <span>Education:</span>
-                            <p><?php echo get_field('education') ?></p>
-                        </div>
-                        <p><?php echo get_field('agencies') ?></p>
-                    </div>
-            </div>
-
-            <!-- <?php echo get_field('quote') ?> -->
-            <span class="position-absolute item-text">
-                <h3 class="">
-                    <span class="">
-                        <?php
-                        $i += 1;
-                        // echo "0" . $i . " "; 
-                        ?>
-                    </span>
-
-                </h3>
-            </span>
-
-        <?php endforeach;
-                wp_reset_postdata(); ?>
-        </div>
         </section>
         <!-- <section class="update">
             <h3>Selected Works</h3><span class="text-small">2015 - 2020</span>
@@ -304,11 +255,64 @@
 
 
         </section>
+        <?php
+        global $i;
+        global $post;
+        $args = array('category_name'  => 'post-about', 'posts_per_page' => -1,); ///25 //2 for dev
+        $work = get_posts($args);
+        ?>
 
+        <div class="about">
+            <?php foreach ($work as $post) : setup_postdata($post); ?>
 
-        <div id="shift-footer"></div>
-        <section class="section-insta">
-            <?php /*
+                <!-- <h2><?php echo get_field('about-intro') ?></h2> -->
+
+                <h3 class="d-block mt-5">Experience</h3>
+                <div class="post-about-item column about-me">
+
+                    <!-- <div class="col-0 col-sm-2"></div> -->
+
+                    <div class="col-12 col-sm-3 p-0">
+                        <span>Freelance & Agencies</span>
+                        <p><?php echo get_field('costumers') ?></p>
+                    </div>
+                    <div class="col-12 col-sm-3 p-0">
+                        <span>Education</span>
+                        <p><?php echo get_field('education') ?></p>
+                    </div>
+                    <div class="col-0 col-sm-2 p-0"></div>
+                    <!-- <ul class="col-12 col-sm-3 p-0">
+                        <li><a href="mailto:mariedvorzak@gmail.com">
+                                <h3>E-Mail</h3>
+                        <li><a href="https://www.behance.net/dvorzakmar5f83">
+                                <h3>Behance</h3>
+                            </a></li>
+                    </ul> -->
+
+                    <!-- <p><?php echo get_field('agencies') ?></p> -->
+                </div>
+        </div>
+
+        <!-- <?php echo get_field('quote') ?> -->
+        <span class="position-absolute item-text">
+            <h3 class="">
+                <span class="">
+                    <?php
+                    $i += 1;
+                    // echo "0" . $i . " "; 
+                    ?>
+                </span>
+
+            </h3>
+        </span>
+
+    <?php endforeach;
+            wp_reset_postdata(); ?>
+    </div>
+
+    <div id="shift-footer"></div>
+    <section class="section-insta">
+        <?php /*
                     $filter = array('category_name'  => 'insta', 'posts_per_page' => -1,); ///25 //2 for dev
                     $insta = get_posts($filter);
                     ?>
@@ -319,7 +323,7 @@
 
                     <?php endforeach;
                     wp_reset_postdata(); */ ?>
-        </section>
+    </section>
     </section>
     <?php require(dirname(__FILE__) . '/footer.php'); ?>
 

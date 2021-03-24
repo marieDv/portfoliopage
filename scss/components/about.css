@@ -27,10 +27,6 @@
   width: 50%;
 }
 
-.post-about-item.column div:not(:last-child) {
-  border-right: 2px solid #eadbc424;
-}
-
 @media only screen and (max-width: 576px) {
   .post-about-item.column div {
     padding-bottom: 40px;
@@ -41,8 +37,7 @@
 }
 
 .post-about-item p {
-  font-family: "Migra", serif;
-  font-size: 18px;
+  font-size: 13px;
   margin-top: 24px;
   margin-bottom: inherit;
 }

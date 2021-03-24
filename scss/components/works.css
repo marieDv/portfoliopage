@@ -169,7 +169,8 @@
 }
 
 .works .item-text h3 {
-  font-size: 30px;
+  color: #fff;
+  font-size: 24px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

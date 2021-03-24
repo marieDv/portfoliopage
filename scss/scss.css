@@ -314,7 +314,8 @@ p, a {
 }
 
 .works .item-text h3 {
-  font-size: 30px;
+  color: #fff;
+  font-size: 24px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -446,50 +447,26 @@ p, a {
 .footer {
   width: 100%;
   bottom: 0;
-  padding: 24px 0;
-}
-
-.footer h3 {
-  margin-left: 16px;
+  padding: 0 40px;
+  display: block;
+  position: relative;
+  border-top: 2px solid #000000;
 }
 
 .footer ul {
-  padding-left: inherit;
+  padding-left: 0;
   margin: inherit;
-  margin: 24px;
 }
 
 .footer ul li {
   list-style: none;
-  line-height: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 16px;
-  height: 40px;
-  font-size: 18px;
-  font-weight: 400;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   cursor: pointer;
-  font-size: 34px;
-  height: 78px;
   padding-left: 0;
 }
 
 .footer ul li::before {
   content: "";
   position: absolute;
-  display: block;
-  height: 24px;
-  width: 24px;
-  margin-left: -30px;
 }
 
 .footer ul li img {
@@ -497,7 +474,7 @@ p, a {
 }
 
 .footer .reference {
-  padding-left: 16px;
+  display: block;
   opacity: 0.3;
 }
 
@@ -697,10 +674,6 @@ p, a {
   width: 50%;
 }
 
-.post-about-item.column div:not(:last-child) {
-  border-right: 2px solid #eadbc424;
-}
-
 @media only screen and (max-width: 576px) {
   .post-about-item.column div {
     padding-bottom: 40px;
@@ -711,8 +684,7 @@ p, a {
 }
 
 .post-about-item p {
-  font-family: "Migra", serif;
-  font-size: 18px;
+  font-size: 13px;
   margin-top: 24px;
   margin-bottom: inherit;
 }
@@ -961,6 +933,12 @@ a:not(.item):hover:after {
   font-size: 12px;
   display: inline;
   margin-left: 18px;
+}
+
+.about {
+  border-top: 2px solid #000000;
+  padding: 0 40px;
+  padding-bottom: 56px;
 }
 
 @-webkit-keyframes animateLine {

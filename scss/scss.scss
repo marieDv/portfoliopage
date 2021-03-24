@@ -218,6 +218,13 @@ a:not(.item):hover:after {
   // padding: 0 18px 0 18px;
   // background-color: #080707;
 }
+
+.about {
+  border-top: 2px solid #000000;
+  padding: 0 40px;
+  padding-bottom: 56px;
+}
+
 @keyframes animateLine {
   0% {
     transform: scaleX(0.1);
