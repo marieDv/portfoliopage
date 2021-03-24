@@ -95,8 +95,8 @@
             <h3>Selected Works</h3><span class="text-small">2015-2020</span>
             <span class="work-filters">
                 <a id="select-all" class="filter-selected">All</a>
-                <a id="select-web-non-commercial">Web Non-Commercial</a>
-                <a id="select-web-commercial">Web Commercial</a>
+                <a id="select-web-non-commercial">Web</a>
+                <!-- <a id="select-web-commercial">Web Commercial</a> -->
                 <a id="select-creative-coding">Creative Coding</a>
 
             </span>
