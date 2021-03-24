@@ -186,6 +186,10 @@ p, a {
   }
 }
 
+.works-introblock {
+  padding: 0 40px;
+}
+
 .works .item {
   overflow: hidden;
 }
@@ -266,7 +270,7 @@ p, a {
 }
 
 .works .big-section .item-long {
-  height: 330px;
+  height: 338px;
   background-size: cover;
 }
 

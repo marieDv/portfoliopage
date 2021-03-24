@@ -31,7 +31,9 @@
       flex-wrap: wrap;
     }
   }
-
+  &-introblock {
+    padding: 0 40px;
+  }
   .item {
     overflow: hidden;
   }

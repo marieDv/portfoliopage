@@ -41,6 +41,10 @@
   }
 }
 
+.works-introblock {
+  padding: 0 40px;
+}
+
 .works .item {
   overflow: hidden;
 }

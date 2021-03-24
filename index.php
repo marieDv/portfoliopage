@@ -91,6 +91,7 @@
                     wp_reset_postdata(); ?>
         </section> -->
         <section id="shift-navigation" class="works">
+            <div class="works-introblock">
             <h3>Selected Works</h3><span class="text-small">2015-2020</span>
             <span class="work-filters">
                 <a id="select-all" class="filter-selected">All</a>
@@ -99,6 +100,7 @@
                 <a id="select-creative-coding">Creative Coding</a>
 
             </span>
+            </div>
             <div class="works-container container-fluid">
                 <div class="small-section col-12 col-lg-4">
                     <?php
