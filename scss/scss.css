@@ -552,19 +552,6 @@ p, a {
   padding: 0 16px;
 }
 
-.single .title {
-  font-size: 100px;
-  color: #000000;
-  padding-top: 20px;
-  line-height: 0.8;
-}
-
-@media only screen and (max-width: 768px) {
-  .single .title {
-    font-size: 72px;
-  }
-}
-
 .single .subheadline {
   line-height: 1;
   display: inline-block;
@@ -579,7 +566,6 @@ p, a {
 }
 
 .single .index-number, .single strong {
-  font-family: "agrandir-narrow";
   font-size: 48px;
   font-weight: 100;
   color: #000000;
@@ -598,33 +584,23 @@ p, a {
   background: transparent;
   opacity: 0.5;
   padding: 2px 10px;
-  font-weight: 100;
   font-size: 14px;
-  font-family: 'Radio Grotesk', sans-serif;
   letter-spacing: 1.5px;
-}
-
-.single .description {
-  font-family: "agrandir-narrow";
-  font-size: 26px;
-  line-height: 1.2;
-  color: #000;
-  padding-top: 46px;
 }
 
 .single .nav {
   position: absolute;
-  top: 0;
+  top: 125px;
+  left: 40px;
 }
 
 .single .nav .back {
-  height: 32px;
+  height: 27px;
   color: #000000;
   border: 1px solid black;
   border-radius: 99px;
   background: transparent;
   padding: 2px 10px;
-  font-weight: 100;
   display: inline;
   top: -6px;
   margin-right: 16px;
@@ -634,7 +610,7 @@ p, a {
 
 .single .nav .back:hover {
   background: #000;
-  color: #968475;
+  color: #fff;
 }
 
 .single .nav .back:hover::after {
@@ -644,10 +620,6 @@ p, a {
 .single .nav .index {
   font-size: 34px;
   display: inline;
-}
-
-.single .nav .index strong {
-  font-weight: 800;
 }
 
 .post-about-item {
@@ -844,7 +816,7 @@ body {
   }
 }
 
-p {
+p, figcaption {
   font-family: "Stellar", sans-serif !important;
   font-size: 14px;
   font-weight: 100;
@@ -886,8 +858,8 @@ h4 {
 }
 
 .button {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }

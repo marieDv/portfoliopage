@@ -130,7 +130,7 @@ body {
   }
 }
 
-p {
+p, figcaption {
   font-family: "Stellar", sans-serif !important;
   font-size: 14px;
   font-weight: 100;
@@ -170,8 +170,8 @@ h4 {
 }
 
 .button {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }

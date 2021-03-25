@@ -3,19 +3,6 @@
   padding: 0 16px;
 }
 
-.single .title {
-  font-size: 100px;
-  color: #000000;
-  padding-top: 90px;
-  line-height: 0.8;
-}
-
-@media only screen and (max-width: 768px) {
-  .single .title {
-    font-size: 72px;
-  }
-}
-
 .single .subheadline {
   line-height: 1;
   display: inline-block;
@@ -29,31 +16,52 @@
   }
 }
 
-.single .description {
-  font-family: "agrandir-narrow";
-  font-size: 30px;
-  line-height: 1;
-  color: #000;
+.single .index-number, .single strong {
+  font-size: 48px;
+  font-weight: 100;
+  color: #000000;
+}
+
+.single .index-number {
+  padding-right: 24px;
+}
+
+.single button.deactivated {
+  pointer-events: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 99px;
+  padding: inherit;
+  text-transform: uppercase;
+  background: transparent;
+  opacity: 0.5;
+  padding: 2px 10px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
 }
 
 .single .nav {
   position: absolute;
-  top: 0;
+  top: 125px;
+  left: 40px;
 }
 
 .single .nav .back {
-  height: 32px;
+  height: 27px;
   color: #000000;
   border: 1px solid black;
   border-radius: 99px;
   background: transparent;
   padding: 2px 10px;
-  font-weight: 100;
   display: inline;
   top: -6px;
   margin-right: 16px;
   cursor: pointer;
   z-index: 999;
+}
+
+.single .nav .back:hover {
+  background: #000;
+  color: #fff;
 }
 
 .single .nav .back:hover::after {
@@ -63,9 +71,5 @@
 .single .nav .index {
   font-size: 34px;
   display: inline;
-}
-
-.single .nav .index strong {
-  font-weight: 800;
 }
 /*# sourceMappingURL=single.css.map */

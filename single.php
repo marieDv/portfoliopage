@@ -18,6 +18,8 @@
   <meta name="author" content="Marie Dvorzak">
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+
   <link src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" />
   <link rel="stylesheet" href="<? bloginfo('stylesheet_url') ?>">
   <?php
@@ -30,14 +32,10 @@
 
   ?>
   <? wp_head(); ?>
-  <header id="" class="header header-mobile container-fluid">
-    <div id="me-link"></div>
 
-    <!-- <a class="work selected" href="<?php echo get_home_url() ?>">Work</a>
-    <a class="" href="<?php echo get_page_link(780); ?>">About</a> -->
-    <p class="current-alert">currently studying at the Design Academy in Eindhoven. Send me a message if you want to collaborate!</strong></p>
-
-  </header>
+  <header id="navigation" class="header header-mobile container-fluid">
+        <h4>Marie Dvorzak</h4>
+    </header>
   <section class="container-fluid single">
     <span class="nav"><a class="back button" href="<?php echo get_home_url() ?>">back</a>
 
@@ -55,46 +53,42 @@
           $args = array('category' => 2); //25 //2 for dev
           $work = get_posts($args);
           ?>
-
-          <!--   2 25 -->
       </p>
     </span>
-    <span class="index-number"> 
-      
-    <strong>
-    <?php foreach ($work as $post) : setup_postdata($post); ?>
-        <?php $currentIndex += 1;
-              if ($currentPostId === $id) {
-                echo ("0" . $currentIndex);
-              } ?>
-      <?php endforeach;
-            wp_reset_postdata(); ?>
-
-      </strong> / <?php echo "0" . count_cat_post(2) ?></span><button class="deactivated"><?php echo get_field('work-category') ?></button>
-    <h2 class="title"><?php echo get_field('single-title'); ?></h2>
-    <!-- <h3 class="subheadline"><?php echo get_field('single-subheadline') ?></h3> -->
-    <p class="description"><?php echo get_field('description') ?></p>
 
 
-    <?php
-    global $currentPostId;
-    while (have_posts()) : the_post();
+    <div class="container-fluid">
+      <div class="row">
+      <div class="single-media-content col-9">
+        <?php
+        global $currentPostId;
+        while (have_posts()) : the_post();
 
-      $id = $post->ID;
-      $post = get_post($id);
-      $content = apply_filters('the_content', $post->post_content);
-      $currentPostId = $id;
-      echo $content;
-    endwhile;
-    ?>
-
-    <?php if (has_post_thumbnail($post->ID)) : ?>
+          $id = $post->ID;
+          $post = get_post($id);
+          $content = apply_filters('the_content', $post->post_content);
+          $currentPostId = $id;
+          echo $content;
+        endwhile;
+        ?>
+      </div>
+      <div class="col-3 pt-5">
+        <h3 class="title"><?php echo get_field('single-title'); ?></h3>
+        <p class="description"><?php echo get_field('description') ?></p>
+      </div>
+      </div>
+    </div>
+    <!-- <?php if (has_post_thumbnail($post->ID)) : ?>
       <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
     <?php endif; ?>
     <p class="hidden-thumbnail">
       <?php echo $image[0] ?>
-    </p>
-    <div id="overview-swiper-single" class="swiper-container overview-container">
+    </p> -->
+
+
+
+
+    <!-- <div id="overview-swiper-single" class="swiper-container overview-container">
       <div id="overview" class="quickOverview swiper-wrapper">
         <?php
         global $i;
@@ -118,7 +112,7 @@
           <?php }  ?>
         <?php endforeach; ?>
       </div>
-    </div>
+    </div> -->
     </div>
     <?php require(dirname(__FILE__) . '/footer.php'); ?>
   </section>
