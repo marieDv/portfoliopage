@@ -185,7 +185,7 @@ a {
   cursor: pointer;
   text-decoration: none !important;
   padding: 3px 0;
-  color: #ffffff;
+  
 }
 a:after {
   background: none repeat scroll 0 0 transparent;
@@ -199,10 +199,10 @@ a:after {
   width: 0;
 }
 a:visited {
-  color: #ffffff;
+  // color: #ffffff;
 }
 a:hover {
-  color: #ffffff;
+  // color: #ffffff;
 }
 a:not(.item):hover:after {
   transform-origin: left;

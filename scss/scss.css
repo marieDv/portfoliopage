@@ -874,7 +874,6 @@ a {
   cursor: pointer;
   text-decoration: none !important;
   padding: 3px 0;
-  color: #ffffff;
 }
 
 a:after {
@@ -888,14 +887,6 @@ a:after {
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-}
-
-a:visited {
-  color: #ffffff;
-}
-
-a:hover {
-  color: #ffffff;
 }
 
 a:not(.item):hover:after {

@@ -34,8 +34,8 @@
   <? wp_head(); ?>
 
   <header id="navigation" class="header header-mobile container-fluid">
-        <h4>Marie Dvorzak</h4>
-    </header>
+    <h4>Marie Dvorzak</h4>
+  </header>
   <section class="container-fluid single">
     <span class="nav"><a class="back button" href="<?php echo get_home_url() ?>">back</a>
 
@@ -59,23 +59,37 @@
 
     <div class="container-fluid">
       <div class="row">
-      <div class="single-media-content col-9">
-        <?php
-        global $currentPostId;
-        while (have_posts()) : the_post();
+        <div class="single-media-content col-8">
+          <?php
+          global $currentPostId;
+          while (have_posts()) : the_post();
 
-          $id = $post->ID;
-          $post = get_post($id);
-          $content = apply_filters('the_content', $post->post_content);
-          $currentPostId = $id;
-          echo $content;
-        endwhile;
-        ?>
-      </div>
-      <div class="col-3 pt-5">
-        <h3 class="title"><?php echo get_field('single-title'); ?></h3>
-        <p class="description"><?php echo get_field('description') ?></p>
-      </div>
+            $id = $post->ID;
+            $post = get_post($id);
+            $content = apply_filters('the_content', $post->post_content);
+            $currentPostId = $id;
+            echo $content;
+          endwhile;
+          ?>
+        </div>
+        <div class="container-fluid col-4">
+          <div class="col-12 p-0">
+            <h3 class="title"><?php echo get_field('single-title'); ?></h3>
+          </div>
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-4 mt-5">
+                <p>
+                  <?php echo get_field('single-links') ?>
+                </p>
+              </div>
+              <div class="col-8 mt-5">
+                <p class="description"><?php echo get_field('description') ?></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- <?php if (has_post_thumbnail($post->ID)) : ?>
